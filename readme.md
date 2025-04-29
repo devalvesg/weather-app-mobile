@@ -1,53 +1,104 @@
+# Weather App Mobile
 
+Aplicativo **mobile** desenvolvido em **React Native** utilizando **Expo** para consultar condições climáticas em tempo real, baseado na localização do usuário ou em cidades pesquisadas.
 
-# <div align="center">
-  <h1 align="center">Weather App</h1>
-</div>
-<p align="center">
-        Weather application, developed in React Native, consuming external API. Study purposes.
-    <br />
- </p>
+---
 
+## 🎯 Objetivos
+- Obter automaticamente a localização atual do usuário.
+- Buscar manualmente o clima de qualquer cidade.
+- Exibir informações meteorológicas principais: temperatura, sensação térmica, clima, umidade, vento.
+- Mostrar ícone dinâmico conforme o clima.
+- Design responsivo e amigável.
 
-## Technologies
+---
 
-- React Native
-- Nativewind e TailwinCss
-- React-Native-Reanimated
-- Expo
-- Axios
-- Weather-API: [https://www.weatherapi.com]
+## 🗂️ Sumário
+1. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+2. [Instalação](#instalação)
+3. [Como Executar](#como-executar)
+4. [Estrutura do Projeto](#estrutura-do-projeto)
+5. [Funcionalidades](#funcionalidades)
+6. [Contribuição](#contribuição)
+7. [Licença](#licença)
 
+---
 
- 
-<div align="center">
-  <a href="#">
-      <img src="https://github.com/carloscazelattojr/weather-app/blob/main/assets/p1.jpeg" width="200" alt="preview" />
-    <img src="https://github.com/carloscazelattojr/weather-app/blob/main/assets/p2.jpeg" width="200" alt="preview" />      
-  </a>
-</div>
+## 🛠️ Tecnologias Utilizadas
+- **Framework:** React Native (Expo)
+- **Linguagem:** TypeScript
+- **Bibliotecas:**
+  - **Expo Location:** para obter a localização GPS do usuário.
+  - **Axios:** para fazer requisições HTTP.
+  - **React Navigation:** para navegação entre telas (caso expandido).
+- **API:** OpenWeatherMap (ou outra API de clima).
 
- ## libs
- 
+---
+
+## 🚀 Instalação
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/devalvesg/weather-app-mobile.git
+   ```
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd weather-app-mobile
+   ```
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+---
+
+## ▶️ Como Executar
+- Certifique-se de ter o Expo CLI instalado:
+  ```bash
+  npm install -g expo-cli
+  ```
+- Execute o projeto:
+  ```bash
+  expo start
+  ```
+- Escaneie o QR Code no Expo Go App para testar no seu dispositivo físico, ou use um emulador Android/iOS.
+
+---
+
+## 📂 Estrutura do Projeto
+```
+weather-app-mobile/
+├── assets/             # Ícones, imagens e fontes
+├── components/         # Componentes reutilizáveis (ex: WeatherCard)
+├── services/           # Serviços para chamadas de API (ex: weatherService.ts)
+├── screens/            # Telas principais (ex: HomeScreen.tsx)
+├── App.tsx             # Arquivo principal de inicialização
+├── app.json            # Configurações do Expo
+├── tsconfig.json       # Configuração do TypeScript
+├── package.json        # Dependências e scripts
+└── README.md           # Documentação do projeto
 ```
 
-npm i nativewind@2.0.11
-npm i tailwindcss@3.3.2 --save-dev
-npx tailwindcss init
+---
 
-npm install @react-navigation/native
-npx expo install react-native-screens react-native-safe-area-context
-npm install @react-navigation/stack
-npx expo install react-native-gesture-handler
-npm install react-navigation-shared-element
+## ✨ Funcionalidades
+- **Permissão de Localização:** Solicita ao usuário o acesso ao GPS.
+- **Clima Atual:** Obtém a temperatura e condição meteorológica atual com base na geolocalização.
+- **Busca de Cidades:** Permite consultar a previsão de qualquer cidade digitada.
+- **Ícones Dinâmicos:** Exibe ícones de clima (ex: nublado, ensolarado, chuvoso).
+- **Atualização em Tempo Real:** Refresca os dados quando o usuário solicita.
 
-npm i react-native-heroicons
-npm i react-native-axios
+---
 
-npm i lodash
-npm i --save-dev @types/lodash
+## 🤝 Contribuição
+1. Fork este repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/minha-feature`).
+3. Commit suas alterações (`git commit -m 'Adicionando nova feature'`).
+4. Push para a branch (`git push origin feature/minha-feature`).
+5. Abra um Pull Request.
 
-npm i react-native-progress
-npm i @react-native-async-storage/async-storage
+---
 
-```
+## 📜 Licença
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
